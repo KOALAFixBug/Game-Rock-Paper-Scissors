@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto; /* Canh giữa container chính */
+    padding-top: 50px;
+}
+
+.heading {
+    text-align: center;
+    color: #333;
+    margin-bottom: 50px;
+}
+
+.row {
+    display: flex;
+    justify-content: center; /* Canh giữa các phần tử con theo chiều ngang */
+    flex-wrap: wrap;
+    width: 100%; /* Đảm bảo hàng chiếm hết chiều rộng */
+}
+
+.col {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+}
+
+/* --- Style cho ảnh trước khi chọn --- */
+.img-before {
+    width: 150px; 
+    height: 150px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    padding: 20px;
+    background: white;
+}
+
+.img-before:hover {
+    transform: scale(1.1);
+}
+
+#scissors:hover { box-shadow: 0px 0px 20px rgba(0, 0, 255, 0.7); }
+#rock:hover { box-shadow: 0px 0px 20px rgba(255, 0, 0, 0.7); }
+#paper:hover { box-shadow: 0px 0px 20px rgba(0, 255, 0, 0.7); }
+
+
+/* --- Style cho phần kết quả --- */
+/* Thêm margin để tách biệt các phần tử kết quả cho thoáng */
+.col-human, .col-bot, .col-message {
+    /* flex: 1; Xóa dòng này để các phần tử tự co giãn theo nội dung, giúp canh giữa đẹp hơn */
+    margin: 0 20px; /* Tạo khoảng cách giữa các khối */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.col-message h1 {
+    font-size: 2.5rem; /* Tăng kích thước chữ lên một chút */
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    white-space: nowrap; /* Giữ thông báo trên 1 dòng nếu có thể */
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+/* --- Style cho nút Chơi lại --- */
+.btn-retry {
+    padding: 10px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+.btn-retry:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}

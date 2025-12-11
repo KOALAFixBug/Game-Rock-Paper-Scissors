@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game ROCK - PAPER - SCISSORS </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="row header-row">
+            <div class="col">
+                <h1 class="heading">ROCK - PAPER - SCISSORS</h1>
+            </div>
+        </div>
+
+        <div class="row game-area" id="game-row">
+            <div class="col game-col">
+                <img id="scissors" class="img-before" src="img/scissors.png" alt="Scissors" onclick="srpGame(this)">
+            </div>
+            <div class="col game-col">
+                <img id="rock" class="img-before" src="img/fist.png" alt="Rock" onclick="srpGame(this)">
+            </div>
+            <div class="col game-col">
+                <img id="paper" class="img-before" src="img/hand-paper.png" alt="Paper" onclick="srpGame(this)">
+            </div>
+        </div>
+
+        <div class="row result-area" id="result-row" style="display: none;">
+            </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
